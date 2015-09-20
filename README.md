@@ -1,9 +1,6 @@
-ng-pitfalls-demos
+ng demos
 =================
 
-Code samples from my talk: "Avoiding common pitfalls in AngularJS". 
-
-The slides are [here](https://docs.google.com/presentation/d/1-TDbjuLhDw2ubtBw_fiIs3kH6My-LbDs4sl_WCwz0pk/edit).
 
 ## Setup instructions
 
