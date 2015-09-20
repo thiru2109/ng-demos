@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title>ng demo - OOJS</title>
+</head>
+<body>
+<script>
+
+function Root() {}
+
+Root.prototype.add = function(x, y) {  
+    return x + y;
+};
+
+Root.prototype.name = "Peter";
+
+var root = new Root();
+
+var sum = root.add(2, 2);
+
+console.log(sum); // 4
+
+function Child() {}
+
+Child.prototype = Object.create(Root.prototype); // Magic  
+Child.prototype.constructor = Child; // Gotta reset this
+
+console.log(Child.prototype.add); // Looks up the chain 
+
+var child = new Child();
+var sum1 = child.add(2, 2); //calls Root's Add function
+
+console.log("calls Root's Add function " + sum1); // 0
+
+console.log(sum1); 
+
+Child.prototype.name = "John";
+
+Child.prototype.add = function(x, y) {  
+    return x - y; // troll
+};
+
+sum1 = child.add(2, 2);  //calls Child's Add function , Root's Add is hidden now
+
+console.log("calls Child's Add function , Root's Add is hidden now " + sum1); // 0
+
+console.log( child.name); // john
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title>ng demo - scope</title>
+</head>
+<body ng-app="Demo">  
+  <div ng-controller="ChildCtrl">
+    <div ng-controller="AnotherChildCtrl">
+    </div>
+  </div>
+
+<script src="bower_components/angular/angular.js"></script>
+<script type="text/javascript">
+	angular.module('Demo', [])  
+  .controller('ChildCtrl', function($scope) {
+    $scope.name = "foo";
+    $scope.user = {};
+    $scope.user.name = "bar";
+	
+   console.log("ChildCtrl $scope.name :" + $scope.name);
+ })
+ .controller('AnotherChildCtrl', function($scope) {
+   $scope.name = "overwrites foo";
+   
+   console.log("AnotherChildCtrl $scope.name :" + $scope.name);
+   
+   console.log("ChildCtrl $scope.user.name :" + $scope.user.name);
+   
+   $scope.user.name = "changes foo in ChildCtrl";
+   
+   console.log("AnotherChildCtrl $scope.user.name :" + $scope.user.name);
+ });
+</script>
+</body>
+</html>
