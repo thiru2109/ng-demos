@@ -1,12 +1,18 @@
 {
-  "name": "ng-conf-demo",
-  "version": "1.0.0",
+  "name": "angularjs",
+  "version": "1.4.3",
   "authors": [
-    "Uri Shaked"
+    "thiru2109 <thiru2109@yahoo.in>"
   ],
-  "private": true,
-  "license": "ISC",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
   "dependencies": {
-    "angular": "1.2.16"
+    "angular": "angularjs#1.4.3"
   }
 }

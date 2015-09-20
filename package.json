@@ -1,5 +1,5 @@
 {
-  "name": "ng demo",
+  "name": "ng-demo",
   "version": "1.0.0",
   "description": "ng demos",
   "main": "index.js",
@@ -8,16 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "node_modules/.bin/bower install"
   },
-  "repository": {
-    "type": "git",
-    "url": "git:////github.com/thiru2109/ng-demos.git"
-  },
   "author": "Thiru",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/thiru2109/ng-demos/issues"
-  },
-  "homepage": "https://github.com/thiru2109/ng-demos",
   "devDependencies": {
     "tiny-lr": "0.0.7",
     "express": "^4.3.0",
